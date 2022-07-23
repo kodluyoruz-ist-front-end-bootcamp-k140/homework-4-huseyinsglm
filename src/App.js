@@ -9,6 +9,7 @@ import {ROUTES} from "./routes";
 import HomePage from "./pages/HomePage/Homepage";
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
+import NotFound from "./pages/404/NotFound";
 
 
 const AppShellComponent = ({children}) => {
@@ -40,6 +41,7 @@ function App() {
                 <Route path={ROUTES.HOME} element={<HomePage/>}/>
                 <Route path={ROUTES.ABOUTE} element={<About/>}/>
                 <Route path={ROUTES.CONTACT} element={<Contact/>}/>
+                <Route path={"*"} element={<NotFound/>}/>
             </Routes>
         </AppShellComponent>
     );
